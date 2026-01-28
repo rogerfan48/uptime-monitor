@@ -1,0 +1,12 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: always
+    network_mode: "host" # Key: This allows Uptime Kuma to bind directly to the host's network interfaces.
+    environment:
+      - HOST=127.0.0.1
+      - PORT=3006
+    volumes:
+      - ./uptime-kuma-data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock # If you want to monitor Docker container status with Kuma
