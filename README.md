@@ -1,4 +1,4 @@
-# Infrastructure Monitoring (Uptime Kuma)
+# System Status Uptime Monitoring
 
 This directory contains the deployment configuration for **Uptime Kuma**, a self-hosted monitoring tool used to track the status of my personal infrastructure (Web, Mail, DNS).
 
@@ -17,12 +17,13 @@ The monitoring stack is decoupled from the main application stack (`my-portfolio
 ### Directory Structure
 
 ```text
-/home/roger/
-├── my-portfolio/         # Main Application Layer
+.
+├── portfolio-dev/
+├── portfolio-prod/         # Main Application Layer
 │   └── docker-compose.yml
-└── infra-monitor/        # Infrastructure Layer (You are here)
+└── infra-monitor/          # Infrastructure Layer (We are here)
     ├── docker-compose.yml
-    └── uptime-kuma-data/ # Persistent data volume
+    └── uptime-kuma-data/   # Persistent data volume
 ```
 
 ## Deployment
